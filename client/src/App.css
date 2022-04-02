@@ -1,0 +1,68 @@
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -webkit-gradient(
+    linear,
+    40% 0%,
+    75% 84%,
+    from(#fa684e),
+    to(#f5b7ad),
+    color-stop(0.6, #f58677)
+  );
+}
+
+.App {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-image: url(https://wallpaperaccess.com/full/3136240.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 150vh;
+}
+.get_all_videos {
+  position: absolute;
+  left: 260px;
+  top: 40px;
+  color: rgb(255, 0, 0, 0.9);
+}
+.get_all_videos :hover {
+  cursor: pointer;
+}
+
+.get_my_playlist {
+  position: absolute;
+  left: 34px;
+  top: 40px;
+  color: rgb(255, 0, 0, 0.9);
+}
+.get_my_playlist:hover {
+  cursor: pointer;
+}
+
+.logOut {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  color: aliceblue;
+  background: none;
+  border: none;
+}
+
+.container_playlist {
+  background-color: rgba(224, 216, 216, 0.1);
+}
