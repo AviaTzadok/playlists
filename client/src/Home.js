@@ -22,25 +22,23 @@ const App = () => {
   function getMyPlaylist() {
     localStorage.accessToAllVideos = true;
     if (localStorage.getItem("selectedPlaylist")) {
-      try {
-        fetch(
-          `http://localhost:3001/playlist/playlist/${localStorage.getItem(
-            "selectedPlaylist"
-          )}`,
-          {
-            method: "GET",
-            headers: {
-              "content-type": "application/json",
-              authorization: `bearer ${localStorage.getItem("accessToken")}`,
-            },
-          }
-        )
-          .then((res) => res.json())
-          .then((_data) => {
-            setPlaylistFromDB(_data);
-            setVideosPlaylist(_data);
-          });
-      } catch (err) {}
+      fetch(
+        `http://localhost:3001/playlist/playlist/${localStorage.getItem(
+          "selectedPlaylist"
+        )}`,
+        {
+          method: "GET",
+          headers: {
+            "content-type": "application/json",
+            authorization: `bearer ${localStorage.getItem("accessToken")}`,
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((_data) => {
+          setPlaylistFromDB(_data);
+          setVideosPlaylist(_data);
+        });
     }
   }
 
